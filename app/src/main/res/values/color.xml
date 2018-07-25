@@ -35,4 +35,13 @@
     <color name="actionBarMenuTextColor">#FFFFFF</color>
     
     <color name="darkGray">#AAABAF</color>
+
+    <color name="tealPrimaryDark">#00695f</color>
+    <color name="tealPrimaryMid">#009688</color>
+    <color name="tealPrimaryLite">#33ab9f</color>
+
+    <color name="tealSecondaryDark">#14a37f</color>
+    <color name="tealSecondaryMid">#1de9b6</color>
+    <color name="tealSecondaryLite">#4aedc4</color>
+    <color name="colorWhite">#ffffff</color>
 </resources>

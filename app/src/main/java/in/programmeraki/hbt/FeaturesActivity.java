@@ -217,4 +217,8 @@ public class FeaturesActivity extends AppCompatActivity {
 		}
 		return true;
 	}
+
+	public void gotoHomeActivity(View view) {
+		startActivity(new Intent(this, HomeActivity.class));
+	}
 }

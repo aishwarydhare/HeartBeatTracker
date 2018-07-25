@@ -55,11 +55,6 @@
 			android:name="in.programmeraki.hbt.SplashscreenActivity"
 			android:label="@string/app_name"
 			android:theme="@style/AppTheme.Fullscreen" >
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-
-				<category android:name="android.intent.category.LAUNCHER" />
-			</intent-filter>
 
 			<meta-data android:name="android.app.shortcuts"
 				android:resource="@xml/shortcuts" />
@@ -73,6 +68,7 @@
 				<data android:mimeType="application/vnd.no.nordicsemi.type.address"/>
 			</intent-filter>
 		</activity>
+
 		<activity
 			android:name="in.programmeraki.hbt.FeaturesActivity"
 			android:label="@string/app_name"
@@ -81,6 +77,7 @@
 		</activity>
 
 		<!-- Template plugin activities -->
+
 		<!-- Remember to add your plug-in Activities to the Android Manifest file. -->
 		<activity
 			android:name="in.programmeraki.hbt.template.TemplateActivity"
@@ -247,7 +244,17 @@
 			</intent-filter>
 		</activity>
 
-		<service
+        <activity android:name=".HomeActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
 			android:name="in.programmeraki.hbt.cgms.CGMService"
 			android:label="@string/cgms_feature_title" />
 		<service

@@ -36,10 +36,9 @@ import org.achartengine.GraphicalView;
 import java.util.UUID;
 
 import in.programmeraki.hbt.FeaturesActivity;
-import no.nordicsemi.android.ble.BleManager;
-import in.programmeraki.hbt.FeaturesActivity;
 import in.programmeraki.hbt.R;
 import in.programmeraki.hbt.profile.BleProfileActivity;
+import no.nordicsemi.android.ble.BleManager;
 
 /**
  * HRSActivity is the main Heart rate activity. It implements HRSManagerCallbacks to receive callbacks from HRSManager class. The activity supports portrait and landscape orientations. The activity

@@ -92,7 +92,8 @@ public abstract class BleProfileActivity extends AppCompatActivity implements Bl
 		onCreateView(savedInstanceState);
 
 		final Toolbar toolbar = findViewById(R.id.toolbar_actionbar);
-		setSupportActionBar(toolbar);
+		if(toolbar != null)
+			setSupportActionBar(toolbar);
 
 		// Common nRF Toolbox view references are obtained here
 		setUpView();
@@ -129,7 +130,8 @@ public abstract class BleProfileActivity extends AppCompatActivity implements Bl
 	 */
 	protected final void setUpView() {
 		// set GUI
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		if(getSupportActionBar() != null)
+			getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		mConnectButton = findViewById(R.id.action_connect);
 		mDeviceNameView = findViewById(R.id.device_name);
 		mBatteryLevelView = findViewById(R.id.battery);
