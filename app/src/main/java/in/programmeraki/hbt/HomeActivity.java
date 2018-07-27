@@ -4,6 +4,7 @@ import android.bluetooth.BluetoothDevice;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -13,8 +14,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.UUID;
 
+import in.programmeraki.hbt.model.BLEFeedData;
 import in.programmeraki.hbt.profile.BleProfileActivity;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.ble.BleManagerCallbacks;
@@ -28,19 +33,18 @@ public class HomeActivity extends BleProfileActivity implements HRSManagerCallba
     private final static int MIN_POSITIVE_VALUE = 0;
     private final static int REFRESH_INTERVAL = 1000; // 1 second interval
 
-    private final String TAG = "MainActivity";
-
+    private final String TAG = "Main";
+    BLEFeedAdapter bleFeedAdapter;
     private Handler mHandler = new Handler();
-
     private TextView title_tv;
     private Button sync_btn, action_connect, back_btn;
     private ViewGroup content_vg, topbar_ll;
     private RecyclerView recyclerView;
     private ProgressBar progressBar;
     private TextView mHRSValue, mHRSPosition;
-
     private int mHrmValue = 0;
     private int mCounter = 0;
+    private Handler rvHandler;
 
     /*
      * BleActivity Abstract Methods
@@ -61,7 +65,11 @@ public class HomeActivity extends BleProfileActivity implements HRSManagerCallba
         mHRSPosition = findViewById(R.id.text_hrs_position);
 
         progressBar.setVisibility(View.GONE);
-        recyclerView.setVisibility(View.GONE);
+        bleFeedAdapter = new BLEFeedAdapter();
+        recyclerView.setAdapter(bleFeedAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        rvHandler = new Handler();
     }
 
     @Override
@@ -74,8 +82,6 @@ public class HomeActivity extends BleProfileActivity implements HRSManagerCallba
     @Override
     protected void setDefaultUI() {
         Log.d(TAG, "setDefaultUI: ");
-        recyclerView.setVisibility(View.GONE);
-        progressBar.setVisibility(View.VISIBLE);
         mHRSValue.setText(R.string.not_available_value);
         mHRSPosition.setText(R.string.not_available);
     }
@@ -110,6 +116,12 @@ public class HomeActivity extends BleProfileActivity implements HRSManagerCallba
             } else {
                 mHRSValue.setText(R.string.not_available_value);
             }
+
+            Date dtNow = Calendar.getInstance().getTime();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            String strDate= formatter.format(dtNow);
+            bleFeedAdapter.appendNewFeed(new BLEFeedData(strDate, ""+value, "N/A", "N/A"));
+            recyclerView.scrollToPosition(0);
         });
     }
 
@@ -141,13 +153,21 @@ public class HomeActivity extends BleProfileActivity implements HRSManagerCallba
     }
 
     /*
-    * BleActivity Override Methods
-    * */
+     * BleActivity Override Methods
+     * */
     @Override
     public void onServicesDiscovered(BluetoothDevice device, boolean optionalServicesFound) {
         super.onServicesDiscovered(device, optionalServicesFound);
         Log.d(TAG, "onServicesDiscovered: ");
-        Toast.makeText(this, "Gotcha!", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onDeviceConnected(BluetoothDevice device) {
+        super.onDeviceConnected(device);
+        runOnUiThread(() ->{
+            progressBar.setVisibility(View.GONE);
+            Toast.makeText(this, "Device Connected", Toast.LENGTH_SHORT).show();
+        });
     }
 
     @Override
@@ -163,6 +183,15 @@ public class HomeActivity extends BleProfileActivity implements HRSManagerCallba
         runOnUiThread(() -> {
             mHRSValue.setText(R.string.not_available_value);
             mHRSPosition.setText(R.string.not_available);
+            Toast.makeText(this, "Device Disconnected", Toast.LENGTH_SHORT).show();
+        });
+    }
+
+    @Override
+    public void onDeviceConnecting(BluetoothDevice device) {
+        super.onDeviceConnecting(device);
+        runOnUiThread(() -> {
+            progressBar.setVisibility(View.VISIBLE);
         });
     }
 
@@ -177,4 +206,6 @@ public class HomeActivity extends BleProfileActivity implements HRSManagerCallba
         super.onRestoreInstanceState(savedInstanceState);
         mHrmValue = savedInstanceState.getInt(HR_VALUE);
     }
+
+
 }

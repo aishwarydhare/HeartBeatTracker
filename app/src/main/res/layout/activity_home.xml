@@ -62,9 +62,9 @@
 
     <RelativeLayout
         android:id="@+id/live_data_vg"
-        android:layout_below="@id/topbar_ll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbar_ll">
         <TextView
             android:id="@+id/battery"
             android:layout_width="wrap_content"
@@ -158,9 +158,9 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
-                    android:text="Time"
+                    android:text="Timestamp"
                     android:textStyle="bold" />
 
                 <TextView

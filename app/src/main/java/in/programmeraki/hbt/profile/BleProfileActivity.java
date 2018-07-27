@@ -442,4 +442,10 @@ public abstract class BleProfileActivity extends AppCompatActivity implements Bl
 		final Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
 		startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
 	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		mBleManager.disconnect();
+	}
 }
