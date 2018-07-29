@@ -44,7 +44,7 @@
 		android:roundIcon="@mipmap/ic_launcher_round"
 		android:label="@string/app_name"
 		android:theme="@style/AppTheme"
-		android:name=".ToolboxApplication"
+		android:name=".utils.ToolboxApplication"
 		tools:ignore="GoogleAppIndexingWarning" >
 
 		<meta-data
@@ -253,6 +253,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LiveActivity" />
 
         <service
 			android:name="in.programmeraki.hbt.cgms.CGMService"

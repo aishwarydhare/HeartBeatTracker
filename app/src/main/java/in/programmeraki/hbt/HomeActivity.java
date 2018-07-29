@@ -1,6 +1,7 @@
 package in.programmeraki.hbt;
 
 import android.bluetooth.BluetoothDevice;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -19,8 +20,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
 
+import in.programmeraki.hbt.adapter.BLEFeedAdapter;
 import in.programmeraki.hbt.model.BLEFeedData;
 import in.programmeraki.hbt.profile.BleProfileActivity;
+import in.programmeraki.hbt.utils.HRSManager;
+import in.programmeraki.hbt.utils.HRSManagerCallbacks;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.ble.BleManagerCallbacks;
 
@@ -68,6 +72,10 @@ public class HomeActivity extends BleProfileActivity implements HRSManagerCallba
         bleFeedAdapter = new BLEFeedAdapter();
         recyclerView.setAdapter(bleFeedAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        sync_btn.setOnClickListener(view -> {
+            startActivity(new Intent(this, LiveActivity.class));
+        });
 
         rvHandler = new Handler();
     }

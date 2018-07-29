@@ -43,5 +43,11 @@
     <color name="tealSecondaryDark">#14a37f</color>
     <color name="tealSecondaryMid">#1de9b6</color>
     <color name="tealSecondaryLite">#4aedc4</color>
+
+    <color name="redPrimaryDark">#D32F2F</color>
+    <color name="redPrimary">#F44336</color>
+    <color name="orangePrimaryDark">#F57C00</color>
+    <color name="orangePrimary">#FF9800</color>
+
     <color name="colorWhite">#ffffff</color>
 </resources>

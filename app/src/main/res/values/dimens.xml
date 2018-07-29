@@ -42,4 +42,6 @@
     <dimen name="alert_dialog_padding_top">18dp</dimen>
     <dimen name="alert_dialog_padding_bottom">0dp</dimen>
 
+    <dimen name="mb_height_56">56dp</dimen>
+
 </resources>

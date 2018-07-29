@@ -46,11 +46,12 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import in.programmeraki.hbt.nrfkit.hrs.HRSActivity;
 
 import java.util.List;
 
 import in.programmeraki.hbt.adapter.AppAdapter;
-import in.programmeraki.hbt.hrs.HRSActivity;
+import in.programmeraki.hbt.utils.AppHelpFragment;
 
 public class FeaturesActivity extends AppCompatActivity {
 	private static final String NRF_CONNECT_CATEGORY = "no.nordicsemi.android.nrftoolbox.LAUNCHER";
