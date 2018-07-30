@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.uart.database;
+package in.programmeraki.hbt.nrfkit.uart.database;
 
 public interface NameColumns {
 	/** The name */

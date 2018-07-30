@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package in.programmeraki.hbt.app;
+package in.programmeraki.hbt.nrfkit.app;
 
 import android.app.Activity;
 import android.database.Cursor;

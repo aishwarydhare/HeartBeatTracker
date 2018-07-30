@@ -1,4 +1,4 @@
-package in.programmeraki.hbt.cgms;
+package in.programmeraki.hbt.nrfkit.cgms;
 
 import android.content.Context;
 import android.view.LayoutInflater;

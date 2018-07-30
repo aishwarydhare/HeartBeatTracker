@@ -23,12 +23,16 @@ package in.programmeraki.hbt;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcelable;
+import android.preference.PreferenceManager;
+
+import in.programmeraki.hbt.utils.Constant;
 
 public class SplashscreenActivity extends Activity {
 	/** Splash screen duration time in milliseconds */

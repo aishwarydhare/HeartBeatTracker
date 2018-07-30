@@ -50,7 +50,7 @@
             android:key="settings_assume_dfu_mode"
             android:title="@string/dfu_settings_dfu_assume_dfu_mode" />
 
-        <in.programmeraki.hbt.dfu.settings.AboutDfuPreference
+        <in.programmeraki.hbt.nrfkit.dfu.settings.AboutDfuPreference
             android:summary="@string/dfu_settings_dfu_about_summary"
             android:title="@string/dfu_settings_dfu_about" />
     </PreferenceCategory>

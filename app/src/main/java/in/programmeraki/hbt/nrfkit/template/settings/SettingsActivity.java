@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.template.settings;
+package in.programmeraki.hbt.nrfkit.template.settings;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

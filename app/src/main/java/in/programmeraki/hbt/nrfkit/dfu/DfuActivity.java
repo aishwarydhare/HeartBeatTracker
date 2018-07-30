@@ -19,7 +19,7 @@
  * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package in.programmeraki.hbt.dfu;
+package in.programmeraki.hbt.nrfkit.dfu;
 
 import android.Manifest;
 import android.app.ActivityManager;
@@ -69,13 +69,13 @@ import no.nordicsemi.android.dfu.DfuProgressListenerAdapter;
 import no.nordicsemi.android.dfu.DfuServiceInitiator;
 import no.nordicsemi.android.dfu.DfuServiceListenerHelper;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.dfu.adapter.FileBrowserAppsAdapter;
-import in.programmeraki.hbt.dfu.fragment.UploadCancelFragment;
-import in.programmeraki.hbt.dfu.fragment.ZipInfoFragment;
-import in.programmeraki.hbt.dfu.settings.SettingsActivity;
-import in.programmeraki.hbt.dfu.settings.SettingsFragment;
-import in.programmeraki.hbt.scanner.ScannerFragment;
-import in.programmeraki.hbt.utility.FileHelper;
+import in.programmeraki.hbt.nrfkit.dfu.adapter.FileBrowserAppsAdapter;
+import in.programmeraki.hbt.nrfkit.dfu.fragment.UploadCancelFragment;
+import in.programmeraki.hbt.nrfkit.dfu.fragment.ZipInfoFragment;
+import in.programmeraki.hbt.nrfkit.dfu.settings.SettingsActivity;
+import in.programmeraki.hbt.nrfkit.dfu.settings.SettingsFragment;
+import in.programmeraki.hbt.nrfkit.scanner.ScannerFragment;
+import in.programmeraki.hbt.nrfkit.utility.FileHelper;
 
 /**
  * DfuActivity is the main DFU activity It implements DFUManagerCallbacks to receive callbacks from DFUManager class It implements

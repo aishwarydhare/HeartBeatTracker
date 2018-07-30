@@ -19,7 +19,7 @@
  * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package in.programmeraki.hbt.proximity;
+package in.programmeraki.hbt.nrfkit.proximity;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -49,7 +49,7 @@ import in.programmeraki.hbt.utils.ToolboxApplication;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.log.LogContract;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.profile.multiconnect.BleMulticonnectProfileService;
+import in.programmeraki.hbt.nrfkit.profile.multiconnect.BleMulticonnectProfileService;
 
 public class ProximityService extends BleMulticonnectProfileService implements ProximityManagerCallbacks, ProximityServerManagerCallbacks {
 	@SuppressWarnings("unused")

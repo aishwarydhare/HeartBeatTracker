@@ -31,8 +31,8 @@ import java.util.LinkedList;
 import java.util.UUID;
 
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.parser.BodySensorLocationParser;
-import in.programmeraki.hbt.parser.HeartRateMeasurementParser;
+import in.programmeraki.hbt.nrfkit.parser.BodySensorLocationParser;
+import in.programmeraki.hbt.nrfkit.parser.HeartRateMeasurementParser;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.ble.Request;
 import no.nordicsemi.android.log.Logger;

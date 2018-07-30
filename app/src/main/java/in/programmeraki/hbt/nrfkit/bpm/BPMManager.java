@@ -19,7 +19,7 @@
  * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package in.programmeraki.hbt.bpm;
+package in.programmeraki.hbt.nrfkit.bpm;
 
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCharacteristic;
@@ -34,8 +34,8 @@ import java.util.UUID;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.ble.Request;
 import no.nordicsemi.android.log.Logger;
-import in.programmeraki.hbt.parser.BloodPressureMeasurementParser;
-import in.programmeraki.hbt.parser.IntermediateCuffPressureParser;
+import in.programmeraki.hbt.nrfkit.parser.BloodPressureMeasurementParser;
+import in.programmeraki.hbt.nrfkit.parser.IntermediateCuffPressureParser;
 
 public class BPMManager extends BleManager<BPMManagerCallbacks> {
 	/** Blood Pressure service UUID */

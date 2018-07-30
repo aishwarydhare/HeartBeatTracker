@@ -34,8 +34,8 @@ import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.ble.Request;
 import no.nordicsemi.android.log.Logger;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.parser.BodySensorLocationParser;
-import in.programmeraki.hbt.parser.HeartRateMeasurementParser;
+import in.programmeraki.hbt.nrfkit.parser.BodySensorLocationParser;
+import in.programmeraki.hbt.nrfkit.parser.HeartRateMeasurementParser;
 
 /**
  * HRSManager class performs BluetoothGatt operations for connection, service discovery, enabling notification and reading characteristics. All operations required to connect to device with BLE HR

@@ -19,7 +19,7 @@
  * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package in.programmeraki.hbt.gls;
+package in.programmeraki.hbt.nrfkit.gls;
 
 import android.bluetooth.BluetoothDevice;
 import android.os.Bundle;
@@ -35,7 +35,7 @@ import java.util.UUID;
 
 import no.nordicsemi.android.ble.BleManager;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.profile.BleProfileExpandableListActivity;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileExpandableListActivity;
 
 // TODO The GlucoseActivity should be rewritten to use the service approach, like other do.
 public class GlucoseActivity extends BleProfileExpandableListActivity implements PopupMenu.OnMenuItemClickListener, GlucoseManagerCallbacks {

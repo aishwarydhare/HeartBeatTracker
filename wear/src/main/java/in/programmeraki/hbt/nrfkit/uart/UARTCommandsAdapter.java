@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.uart;
+package in.programmeraki.hbt.nrfkit.uart;
 
 import android.support.wearable.view.CircularButton;
 import android.support.wearable.view.GridPagerAdapter;
@@ -30,8 +30,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.uart.domain.Command;
-import in.programmeraki.hbt.uart.domain.UartConfiguration;
+import in.programmeraki.hbt.nrfkit.uart.domain.Command;
+import in.programmeraki.hbt.nrfkit.uart.domain.UartConfiguration;
 
 public class UARTCommandsAdapter extends GridPagerAdapter {
 	private final OnCommandSelectedListener mListener;

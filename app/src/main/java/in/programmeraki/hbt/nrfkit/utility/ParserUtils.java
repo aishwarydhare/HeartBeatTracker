@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.utility;
+package in.programmeraki.hbt.nrfkit.utility;
 
 public class ParserUtils extends no.nordicsemi.android.ble.utils.ParserUtils {
 

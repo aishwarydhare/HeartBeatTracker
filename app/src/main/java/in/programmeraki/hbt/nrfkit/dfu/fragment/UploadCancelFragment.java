@@ -19,7 +19,7 @@
  * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package in.programmeraki.hbt.dfu.fragment;
+package in.programmeraki.hbt.nrfkit.dfu.fragment;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -33,7 +33,7 @@ import android.support.v7.app.AlertDialog;
 import android.util.Log;
 
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.dfu.DfuService;
+import in.programmeraki.hbt.nrfkit.dfu.DfuService;
 
 /**
  * When cancel button is pressed during uploading this fragment shows uploading cancel dialog

@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.template;
+package in.programmeraki.hbt.nrfkit.template;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -38,7 +38,7 @@ import in.programmeraki.hbt.utils.ToolboxApplication;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.log.Logger;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.profile.BleProfileService;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileService;
 
 public class TemplateService extends BleProfileService implements TemplateManagerCallbacks {
 	public static final String BROADCAST_TEMPLATE_MEASUREMENT = "no.nordicsemi.android.nrftoolbox.template.BROADCAST_MEASUREMENT";

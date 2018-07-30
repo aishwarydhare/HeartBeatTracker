@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.csc;
+package in.programmeraki.hbt.nrfkit.csc;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -40,8 +40,8 @@ import in.programmeraki.hbt.utils.ToolboxApplication;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.log.Logger;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.csc.settings.SettingsFragment;
-import in.programmeraki.hbt.profile.BleProfileService;
+import in.programmeraki.hbt.nrfkit.csc.settings.SettingsFragment;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileService;
 
 public class CSCService extends BleProfileService implements CSCManagerCallbacks {
 	private static final String TAG = "CSCService";

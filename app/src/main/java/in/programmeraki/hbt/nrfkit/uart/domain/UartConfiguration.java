@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.uart.domain;
+package in.programmeraki.hbt.nrfkit.uart.domain;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementArray;

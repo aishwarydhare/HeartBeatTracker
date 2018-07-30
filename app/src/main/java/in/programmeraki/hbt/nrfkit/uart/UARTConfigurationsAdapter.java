@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  ************************************************************************************************************************************************/
 
-package in.programmeraki.hbt.uart;
+package in.programmeraki.hbt.nrfkit.uart;
 
 import android.content.Context;
 import android.database.Cursor;

@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.hts;
+package in.programmeraki.hbt.nrfkit.hts;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -34,11 +34,11 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.LocalBroadcastManager;
 
 import in.programmeraki.hbt.FeaturesActivity;
+import in.programmeraki.hbt.R;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileService;
 import in.programmeraki.hbt.utils.ToolboxApplication;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.log.Logger;
-import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.profile.BleProfileService;
 
 public class HTSService extends BleProfileService implements HTSManagerCallbacks {
 	public static final String BROADCAST_HTS_MEASUREMENT = "no.nordicsemi.android.nrftoolbox.hts.BROADCAST_HTS_MEASUREMENT";
@@ -49,17 +49,21 @@ public class HTSService extends BleProfileService implements HTSManagerCallbacks
 	private final static int NOTIFICATION_ID = 267;
 	private final static int OPEN_ACTIVITY_REQ = 0;
 	private final static int DISCONNECT_REQ = 1;
-
-	private HTSManager mManager;
-
 	private final LocalBinder mBinder = new RSCBinder();
-
 	/**
-	 * This local binder is an interface for the bonded activity to operate with the HTS sensor
+	 * This broadcast receiver listens for {@link #ACTION_DISCONNECT} that may be fired by pressing Disconnect action button on the notification.
 	 */
-	public class RSCBinder extends LocalBinder {
-		// empty
-	}
+	private final BroadcastReceiver mDisconnectActionBroadcastReceiver = new BroadcastReceiver() {
+		@Override
+		public void onReceive(final Context context, final Intent intent) {
+			Logger.i(getLogSession(), "[Notification] Disconnect action pressed");
+			if (isConnected())
+				getBinder().disconnect();
+			else
+				stopSelf();
+		}
+	};
+	private HTSManager mManager;
 
 	@Override
 	protected LocalBinder getBinder() {
@@ -116,7 +120,7 @@ public class HTSService extends BleProfileService implements HTSManagerCallbacks
 
 	/**
 	 * Creates the notification
-	 * 
+	 *
 	 * @param messageResId
 	 *            message resource id. The message must have one String parameter,<br />
 	 *            f.e. <code>&lt;string name="name"&gt;%s is connected&lt;/string&gt;</code>
@@ -154,16 +158,9 @@ public class HTSService extends BleProfileService implements HTSManagerCallbacks
 	}
 
 	/**
-	 * This broadcast receiver listens for {@link #ACTION_DISCONNECT} that may be fired by pressing Disconnect action button on the notification.
+	 * This local binder is an interface for the bonded activity to operate with the HTS sensor
 	 */
-	private final BroadcastReceiver mDisconnectActionBroadcastReceiver = new BroadcastReceiver() {
-		@Override
-		public void onReceive(final Context context, final Intent intent) {
-			Logger.i(getLogSession(), "[Notification] Disconnect action pressed");
-			if (isConnected())
-				getBinder().disconnect();
-			else
-				stopSelf();
-		}
-	};
+	public class RSCBinder extends LocalBinder {
+		// empty
+	}
 }

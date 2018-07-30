@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.cgms;
+package in.programmeraki.hbt.nrfkit.cgms;
 
 import android.bluetooth.BluetoothDevice;
 

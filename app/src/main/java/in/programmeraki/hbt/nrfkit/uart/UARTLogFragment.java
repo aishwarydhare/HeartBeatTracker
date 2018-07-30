@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.uart;
+package in.programmeraki.hbt.nrfkit.uart;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -47,7 +47,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.profile.BleProfileService;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileService;
 import no.nordicsemi.android.log.ILogSession;
 import no.nordicsemi.android.log.LogContract;
 
@@ -60,7 +60,7 @@ public class UARTLogFragment extends ListFragment implements LoaderManager.Loade
 	private static final String[] LOG_PROJECTION = { LogContract.Log._ID, LogContract.Log.TIME, LogContract.Log.LEVEL, LogContract.Log.DATA };
 
 	/** The service UART interface that may be used to send data to the target. */
-	private in.programmeraki.hbt.uart.UARTInterface mUARTInterface;
+	private in.programmeraki.hbt.nrfkit.uart.UARTInterface mUARTInterface;
 	/** The adapter used to populate the list with log entries. */
 	private CursorAdapter mLogAdapter;
 	/** The log session created to log events related with the target device. */

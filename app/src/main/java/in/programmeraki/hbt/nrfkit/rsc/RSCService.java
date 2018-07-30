@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.rsc;
+package in.programmeraki.hbt.nrfkit.rsc;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -39,7 +39,7 @@ import in.programmeraki.hbt.utils.ToolboxApplication;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.log.Logger;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.profile.BleProfileService;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileService;
 
 public class RSCService extends BleProfileService implements RSCManagerCallbacks {
 	private static final String TAG = "RSCService";

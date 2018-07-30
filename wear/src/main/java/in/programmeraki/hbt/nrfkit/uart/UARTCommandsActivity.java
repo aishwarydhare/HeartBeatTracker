@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.uart;
+package in.programmeraki.hbt.nrfkit.uart;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -56,8 +56,8 @@ import com.google.android.gms.wearable.Wearable;
 import in.programmeraki.ble.BleProfileService;
 import in.programmeraki.hbt.R;
 import in.programmeraki.hbt.wearable.common.Constants;
-import in.programmeraki.hbt.uart.domain.Command;
-import in.programmeraki.hbt.uart.domain.UartConfiguration;
+import in.programmeraki.hbt.nrfkit.uart.domain.Command;
+import in.programmeraki.hbt.nrfkit.uart.domain.UartConfiguration;
 
 public class UARTCommandsActivity extends Activity implements UARTCommandsAdapter.OnCommandSelectedListener, GoogleApiClient.ConnectionCallbacks,
 		DataApi.DataListener, GoogleApiClient.OnConnectionFailedListener, MessageApi.MessageListener {

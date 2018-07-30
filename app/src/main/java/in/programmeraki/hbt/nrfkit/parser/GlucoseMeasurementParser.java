@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.parser;
+package in.programmeraki.hbt.nrfkit.parser;
 
 import android.bluetooth.BluetoothGattCharacteristic;
 

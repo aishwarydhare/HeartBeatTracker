@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.rsc;
+package in.programmeraki.hbt.nrfkit.rsc;
 
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCharacteristic;
@@ -34,7 +34,7 @@ import java.util.UUID;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.ble.Request;
 import no.nordicsemi.android.log.Logger;
-import in.programmeraki.hbt.parser.RSCMeasurementParser;
+import in.programmeraki.hbt.nrfkit.parser.RSCMeasurementParser;
 
 public class RSCManager extends BleManager<RSCManagerCallbacks> {
 	private static final byte INSTANTANEOUS_STRIDE_LENGTH_PRESENT = 0x01; // 1 bit

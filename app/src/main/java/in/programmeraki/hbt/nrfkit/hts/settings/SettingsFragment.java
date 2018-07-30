@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.hts.settings;
+package in.programmeraki.hbt.nrfkit.hts.settings;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;

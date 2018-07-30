@@ -39,7 +39,7 @@ import android.widget.Toast;
 import in.programmeraki.hbt.R;
 
 import in.programmeraki.ble.BleProfileService;
-import in.programmeraki.hbt.uart.UARTConfigurationsActivity;
+import in.programmeraki.hbt.nrfkit.uart.UARTConfigurationsActivity;
 
 public class ScannerActivity extends Activity {
 	private static final String TAG = "ScannerActivity";

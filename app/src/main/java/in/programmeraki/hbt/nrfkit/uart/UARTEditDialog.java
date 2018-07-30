@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.uart;
+package in.programmeraki.hbt.nrfkit.uart;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -40,7 +40,7 @@ import android.widget.ImageView;
 import android.widget.RadioGroup;
 
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.uart.domain.Command;
+import in.programmeraki.hbt.nrfkit.uart.domain.Command;
 
 public class UARTEditDialog extends DialogFragment implements View.OnClickListener, GridView.OnItemClickListener {
 	private final static String ARG_INDEX = "index";

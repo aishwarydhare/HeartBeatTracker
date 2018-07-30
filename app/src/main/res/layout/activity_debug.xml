@@ -2,24 +2,23 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@color/colorWhite"
     android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/topbar_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/tealPrimaryDark"
+        android:background="@color/colorWhite"
         android:orientation="horizontal"
         android:padding="8dp">
 
-        <Button
-            android:id="@+id/back_btn"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:background="@color/tealSecondaryDark"
-            android:padding="10dp"
-            android:text="back"
-            android:textColor="@color/colorWhite"/>
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="15dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"/>
 
         <TextView
             android:id="@+id/title_tv"
@@ -27,18 +26,19 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_gravity="center"
-            android:layout_toRightOf="@id/back_btn"
+            android:layout_toRightOf="@id/back_iv"
             android:padding="10dp"
             android:paddingLeft="10dp"
             android:text="Raw Feeds"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/tealPrimaryDark"
             android:textStyle="bold"/>
 
         <Button
             android:id="@+id/action_connect"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:background="@color/tealSecondaryDark"
             android:onClick="onConnectClicked"
@@ -49,6 +49,7 @@
         <Button
             android:id="@+id/sync_btn"
             android:layout_width="80dp"
+            android:visibility="gone"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginEnd="10dp"
@@ -79,7 +80,7 @@
             android:textColor="#FFFFFF"
             android:textSize="12sp"/>
 
-        <in.programmeraki.hbt.widget.TrebuchetTextView
+        <in.programmeraki.hbt.nrfkit.widget.TrebuchetTextView
             android:id="@+id/device_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -93,7 +94,7 @@
             android:textAllCaps="true"
             android:textAppearance="?android:attr/textAppearanceLarge"/>
 
-        <in.programmeraki.hbt.widget.TrebuchetTextView
+        <in.programmeraki.hbt.nrfkit.widget.TrebuchetTextView
             android:id="@+id/text_hrs_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -106,7 +107,7 @@
             android:text="@string/not_available_value"
             android:textSize="45sp"/>
 
-        <in.programmeraki.hbt.widget.TrebuchetTextView
+        <in.programmeraki.hbt.nrfkit.widget.TrebuchetTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -116,7 +117,7 @@
             android:text="@string/hrs_value_unit"
             android:textSize="16sp"/>
 
-        <in.programmeraki.hbt.widget.TrebuchetTextView
+        <in.programmeraki.hbt.nrfkit.widget.TrebuchetTextView
             android:id="@+id/text_hrs_position"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -129,7 +130,7 @@
             android:text="@string/not_available"
             android:textSize="35sp"/>
 
-        <in.programmeraki.hbt.widget.TrebuchetTextView
+        <in.programmeraki.hbt.nrfkit.widget.TrebuchetTextView
             android:id="@+id/text_hrs_position_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

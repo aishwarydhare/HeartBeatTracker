@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.wearable.common;
+package in.programmeraki.hbt.nrfkit.wearable.common;
 
 /**
  * Constants used for exchanging data and messages between handheld and Android Wear devices.

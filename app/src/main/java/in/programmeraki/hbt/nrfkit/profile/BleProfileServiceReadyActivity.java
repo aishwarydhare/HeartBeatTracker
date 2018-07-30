@@ -19,7 +19,7 @@
  * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package in.programmeraki.hbt.profile;
+package in.programmeraki.hbt.nrfkit.profile;
 
 import android.app.Service;
 import android.bluetooth.BluetoothAdapter;
@@ -54,8 +54,8 @@ import no.nordicsemi.android.log.ILogSession;
 import no.nordicsemi.android.log.LocalLogSession;
 import no.nordicsemi.android.log.Logger;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.scanner.ScannerFragment;
-import in.programmeraki.hbt.utility.DebugLogger;
+import in.programmeraki.hbt.nrfkit.scanner.ScannerFragment;
+import in.programmeraki.hbt.nrfkit.utility.DebugLogger;
 
 /**
  * <p>

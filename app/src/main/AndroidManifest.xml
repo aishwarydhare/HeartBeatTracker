@@ -80,7 +80,7 @@
 
 		<!-- Remember to add your plug-in Activities to the Android Manifest file. -->
 		<activity
-			android:name="in.programmeraki.hbt.template.TemplateActivity"
+			android:name="in.programmeraki.hbt.nrfkit.template.TemplateActivity"
 			android:icon="@drawable/ic_template_feature"
 			android:label="@string/template_feature_title" >
 			<intent-filter>
@@ -90,15 +90,15 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="in.programmeraki.hbt.template.settings.SettingsActivity"
+			android:name="in.programmeraki.hbt.nrfkit.template.settings.SettingsActivity"
 			android:label="@string/template_settings_title" />
 		<service
-			android:name="in.programmeraki.hbt.template.TemplateService"
+			android:name="in.programmeraki.hbt.nrfkit.template.TemplateService"
 			android:label="@string/template_feature_title" />
 
 		<!-- Plug-in activities -->
 		<activity
-			android:name="in.programmeraki.hbt.dfu.DfuActivity"
+			android:name="in.programmeraki.hbt.nrfkit.dfu.DfuActivity"
 			android:icon="@drawable/ic_dfu_feature"
 			android:label="@string/dfu_feature_title" >
 			<intent-filter>
@@ -108,13 +108,13 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="in.programmeraki.hbt.dfu.settings.SettingsActivity"
+			android:name="in.programmeraki.hbt.nrfkit.dfu.settings.SettingsActivity"
 			android:label="@string/dfu_settings_title" />
 		<activity
-			android:name="in.programmeraki.hbt.dfu.NotificationActivity"
+			android:name="in.programmeraki.hbt.nrfkit.dfu.NotificationActivity"
 			android:label="@string/dfu_feature_title" />
 		<activity
-			android:name="in.programmeraki.hbt.hrs.HRSActivity"
+			android:name="in.programmeraki.hbt.nrfkit.hrs.HRSActivity"
 			android:icon="@drawable/ic_hrs_feature"
 			android:label="@string/hrs_feature_title" >
 			<intent-filter>
@@ -124,7 +124,7 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="in.programmeraki.hbt.hts.HTSActivity"
+			android:name="in.programmeraki.hbt.nrfkit.hts.HTSActivity"
 			android:icon="@drawable/ic_hts_feature"
 			android:label="@string/hts_feature_title" >
 			<intent-filter>
@@ -134,10 +134,10 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="in.programmeraki.hbt.hts.settings.SettingsActivity"
+			android:name="in.programmeraki.hbt.nrfkit.hts.settings.SettingsActivity"
 			android:label="@string/hts_settings_title" />
 		<activity
-			android:name="in.programmeraki.hbt.bpm.BPMActivity"
+			android:name="in.programmeraki.hbt.nrfkit.bpm.BPMActivity"
 			android:icon="@drawable/ic_bpm_feature"
 			android:label="@string/bpm_feature_title" >
 			<intent-filter>
@@ -147,7 +147,7 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="in.programmeraki.hbt.gls.GlucoseActivity"
+			android:name="in.programmeraki.hbt.nrfkit.gls.GlucoseActivity"
 			android:icon="@drawable/ic_glucose_feature"
 			android:label="@string/gls_feature_title" >
 			<intent-filter>
@@ -157,7 +157,7 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="in.programmeraki.hbt.proximity.ProximityActivity"
+			android:name="in.programmeraki.hbt.nrfkit.proximity.ProximityActivity"
 			android:icon="@drawable/ic_proximity_feature"
 			android:label="@string/proximity_feature_title"
 			android:launchMode="singleTask" >
@@ -168,7 +168,7 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="in.programmeraki.hbt.rsc.RSCActivity"
+			android:name="in.programmeraki.hbt.nrfkit.rsc.RSCActivity"
 			android:icon="@drawable/ic_rsc_feature"
 			android:label="@string/rsc_feature_title"
 			android:launchMode="singleTask" >
@@ -179,10 +179,10 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="in.programmeraki.hbt.rsc.settings.SettingsActivity"
+			android:name="in.programmeraki.hbt.nrfkit.rsc.settings.SettingsActivity"
 			android:label="@string/rsc_settings_title" />
 		<activity
-			android:name="in.programmeraki.hbt.csc.CSCActivity"
+			android:name="in.programmeraki.hbt.nrfkit.csc.CSCActivity"
 			android:icon="@drawable/ic_csc_feature"
 			android:label="@string/csc_feature_title"
 			android:launchMode="singleTask" >
@@ -193,10 +193,10 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="in.programmeraki.hbt.csc.settings.SettingsActivity"
+			android:name="in.programmeraki.hbt.nrfkit.csc.settings.SettingsActivity"
 			android:label="@string/csc_settings_title" />
 		<activity
-			android:name="in.programmeraki.hbt.uart.UARTActivity"
+			android:name="in.programmeraki.hbt.nrfkit.uart.UARTActivity"
 			android:icon="@drawable/ic_uart_feature"
 			android:label="@string/uart_feature_title"
 			android:windowSoftInputMode="adjustResize"
@@ -207,7 +207,7 @@
 				<category android:name="no.nordicsemi.android.nrftoolbox.LAUNCHER" />
 			</intent-filter>
 		</activity>
-		<activity android:name="in.programmeraki.hbt.cgms.CGMSActivity"
+		<activity android:name="in.programmeraki.hbt.nrfkit.cgms.CGMSActivity"
 			android:icon="@drawable/ic_cgms_feature"
 			android:label="@string/cgms_feature_title"
 			android:launchMode="singleTask">
@@ -219,10 +219,10 @@
 		</activity>
 
 		<service
-			android:name="in.programmeraki.hbt.proximity.ProximityService"
+			android:name="in.programmeraki.hbt.nrfkit.proximity.ProximityService"
 			android:label="@string/proximity_feature_title" />
 		<service
-			android:name="in.programmeraki.hbt.dfu.DfuService"
+			android:name="in.programmeraki.hbt.nrfkit.dfu.DfuService"
 			android:exported="true"
 			android:label="@string/dfu_service_title" >
 			<intent-filter>
@@ -233,7 +233,7 @@
 		</service>
 
 		<activity
-			android:name="in.programmeraki.hbt.dfu.DfuInitiatorActivity"
+			android:name="in.programmeraki.hbt.nrfkit.dfu.DfuInitiatorActivity"
 			android:label="@string/dfu_service_title"
 			android:noHistory="true"
 			android:theme="@style/AppTheme.Translucent" >
@@ -244,32 +244,38 @@
 			</intent-filter>
 		</activity>
 
-        <activity android:name=".HomeActivity"
+        <activity android:name=".DebugActivity"
             android:screenOrientation="portrait">
 
+        </activity>
+
+        <activity android:name=".LiveActivity">
+
+        </activity>
+
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LiveActivity" />
 
         <service
-			android:name="in.programmeraki.hbt.cgms.CGMService"
+			android:name="in.programmeraki.hbt.nrfkit.cgms.CGMService"
 			android:label="@string/cgms_feature_title" />
 		<service
-			android:name="in.programmeraki.hbt.rsc.RSCService"
+			android:name="in.programmeraki.hbt.nrfkit.rsc.RSCService"
 			android:label="@string/rsc_feature_title" />
 		<service
-			android:name="in.programmeraki.hbt.csc.CSCService"
+			android:name="in.programmeraki.hbt.nrfkit.csc.CSCService"
 			android:label="@string/csc_feature_title" />
 		<service
-			android:name="in.programmeraki.hbt.hts.HTSService"
+			android:name="in.programmeraki.hbt.nrfkit.hts.HTSService"
 			android:label="@string/hts_feature_title" />
 		<service
-			android:name="in.programmeraki.hbt.uart.UARTService"
+			android:name="in.programmeraki.hbt.nrfkit.uart.UARTService"
 			android:label="@string/uart_feature_title" />
+
 		<service android:name=".wearable.MainWearableListenerService">
 			<intent-filter>
 				<action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
@@ -278,8 +284,8 @@
 			</intent-filter>
 		</service>
 
-		<provider android:name="in.programmeraki.hbt.uart.UARTLocalLogContentProvider"
-			android:authorities="in.programmeraki.hbt.uart.log"
+		<provider android:name="in.programmeraki.hbt.nrfkit.uart.UARTLocalLogContentProvider"
+			android:authorities="in.programmeraki.hbt.nrfkit.uart.log"
 			android:exported="true"/>
 	</application>
 

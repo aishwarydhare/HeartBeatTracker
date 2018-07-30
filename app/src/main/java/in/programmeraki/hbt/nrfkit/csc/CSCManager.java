@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.csc;
+package in.programmeraki.hbt.nrfkit.csc;
 
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCharacteristic;
@@ -34,7 +34,7 @@ import java.util.UUID;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.ble.Request;
 import no.nordicsemi.android.log.Logger;
-import in.programmeraki.hbt.parser.CSCMeasurementParser;
+import in.programmeraki.hbt.nrfkit.parser.CSCMeasurementParser;
 
 public class CSCManager extends BleManager<CSCManagerCallbacks> {
 	/** Cycling Speed and Cadence service UUID */

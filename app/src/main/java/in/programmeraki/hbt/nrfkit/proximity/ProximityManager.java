@@ -19,7 +19,7 @@
  * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package in.programmeraki.hbt.proximity;
+package in.programmeraki.hbt.nrfkit.proximity;
 
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCharacteristic;
@@ -33,8 +33,8 @@ import java.util.UUID;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.ble.Request;
 import no.nordicsemi.android.log.Logger;
-import in.programmeraki.hbt.parser.AlertLevelParser;
-import in.programmeraki.hbt.utility.DebugLogger;
+import in.programmeraki.hbt.nrfkit.parser.AlertLevelParser;
+import in.programmeraki.hbt.nrfkit.utility.DebugLogger;
 
 public class ProximityManager extends BleManager<ProximityManagerCallbacks> {
 	private final String TAG = "ProximityManager";

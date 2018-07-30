@@ -19,7 +19,7 @@
  * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package in.programmeraki.hbt.template;
+package in.programmeraki.hbt.nrfkit.template;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -34,9 +34,9 @@ import android.widget.TextView;
 import java.util.UUID;
 
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.profile.BleProfileService;
-import in.programmeraki.hbt.profile.BleProfileServiceReadyActivity;
-import in.programmeraki.hbt.template.settings.SettingsActivity;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileService;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileServiceReadyActivity;
+import in.programmeraki.hbt.nrfkit.template.settings.SettingsActivity;
 
 /**
  * Modify the Template Activity to match your needs.

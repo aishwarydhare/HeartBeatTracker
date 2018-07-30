@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,13 +23,13 @@ import java.util.UUID;
 
 import in.programmeraki.hbt.adapter.BLEFeedAdapter;
 import in.programmeraki.hbt.model.BLEFeedData;
-import in.programmeraki.hbt.profile.BleProfileActivity;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileActivity;
 import in.programmeraki.hbt.utils.HRSManager;
 import in.programmeraki.hbt.utils.HRSManagerCallbacks;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.ble.BleManagerCallbacks;
 
-public class HomeActivity extends BleProfileActivity implements HRSManagerCallbacks {
+public class DebugActivity extends BleProfileActivity implements HRSManagerCallbacks {
 
     private final static String HR_VALUE = "hr_value";
     private final static String HR_POS = "hr_pos";
@@ -41,7 +42,8 @@ public class HomeActivity extends BleProfileActivity implements HRSManagerCallba
     BLEFeedAdapter bleFeedAdapter;
     private Handler mHandler = new Handler();
     private TextView title_tv;
-    private Button sync_btn, action_connect, back_btn;
+    private Button sync_btn, action_connect;
+    private ImageView back_iv;
     private ViewGroup content_vg, topbar_ll;
     private RecyclerView recyclerView;
     private ProgressBar progressBar;
@@ -55,12 +57,12 @@ public class HomeActivity extends BleProfileActivity implements HRSManagerCallba
      * */
     @Override
     protected void onCreateView(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_debug);
 
         title_tv = findViewById(R.id.title_tv);
         action_connect = findViewById(R.id.action_connect);
         sync_btn = findViewById(R.id.sync_btn);
-        back_btn = findViewById(R.id.back_btn);
+        back_iv = findViewById(R.id.back_iv);
         progressBar = findViewById(R.id.progressBar);
         content_vg = findViewById(R.id.content_vg);
         topbar_ll = findViewById(R.id.topbar_ll);
@@ -75,6 +77,10 @@ public class HomeActivity extends BleProfileActivity implements HRSManagerCallba
 
         sync_btn.setOnClickListener(view -> {
             startActivity(new Intent(this, LiveActivity.class));
+        });
+
+        back_iv.setOnClickListener(view -> {
+            finish();
         });
 
         rvHandler = new Handler();

@@ -20,14 +20,14 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.wearable;
+package in.programmeraki.hbt.nrfkit.wearable;
 
 import android.content.Intent;
 
 import com.google.android.gms.wearable.MessageEvent;
 import com.google.android.gms.wearable.WearableListenerService;
 
-import in.programmeraki.hbt.uart.UARTService;
+import in.programmeraki.hbt.nrfkit.uart.UARTService;
 import in.programmeraki.hbt.wearable.common.Constants;
 
 /**

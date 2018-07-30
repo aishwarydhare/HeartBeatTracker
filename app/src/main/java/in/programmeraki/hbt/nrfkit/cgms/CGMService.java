@@ -1,4 +1,4 @@
-package in.programmeraki.hbt.cgms;
+package in.programmeraki.hbt.nrfkit.cgms;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -17,7 +17,7 @@ import in.programmeraki.hbt.utils.ToolboxApplication;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.log.Logger;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.profile.BleProfileService;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileService;
 
 public class CGMService extends BleProfileService implements CGMSManagerCallbacks {
     private static final String ACTION_DISCONNECT = "no.nordicsemi.android.nrftoolbox.cgms.ACTION_DISCONNECT";

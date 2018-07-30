@@ -37,7 +37,7 @@ import java.util.UUID;
 
 import in.programmeraki.hbt.FeaturesActivity;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.profile.BleProfileActivity;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileActivity;
 import no.nordicsemi.android.ble.BleManager;
 
 /**

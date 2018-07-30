@@ -19,7 +19,7 @@
  * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package in.programmeraki.hbt.proximity;
+package in.programmeraki.hbt.nrfkit.proximity;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -30,9 +30,9 @@ import android.support.v7.widget.RecyclerView;
 import java.util.UUID;
 
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.profile.multiconnect.BleMulticonnectProfileService;
-import in.programmeraki.hbt.profile.multiconnect.BleMulticonnectProfileServiceReadyActivity;
-import in.programmeraki.hbt.widget.DividerItemDecoration;
+import in.programmeraki.hbt.nrfkit.profile.multiconnect.BleMulticonnectProfileService;
+import in.programmeraki.hbt.nrfkit.profile.multiconnect.BleMulticonnectProfileServiceReadyActivity;
+import in.programmeraki.hbt.nrfkit.widget.DividerItemDecoration;
 
 public class ProximityActivity extends BleMulticonnectProfileServiceReadyActivity<ProximityService.ProximityBinder> {
 	private static final String TAG = "ProximityActivity";

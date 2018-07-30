@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.cgms;
+package in.programmeraki.hbt.nrfkit.cgms;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -39,8 +39,8 @@ import android.widget.PopupMenu;
 import java.util.UUID;
 
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.profile.BleProfileService;
-import in.programmeraki.hbt.profile.BleProfileServiceReadyActivity;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileService;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileServiceReadyActivity;
 
 public class CGMSActivity extends BleProfileServiceReadyActivity<CGMService.CGMSBinder> implements PopupMenu.OnMenuItemClickListener {
 	private View mControlPanelStd;

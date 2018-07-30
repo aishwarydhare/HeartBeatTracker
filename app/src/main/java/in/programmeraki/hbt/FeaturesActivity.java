@@ -46,11 +46,11 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import in.programmeraki.hbt.nrfkit.adapter.AppAdapter;
 import in.programmeraki.hbt.nrfkit.hrs.HRSActivity;
 
 import java.util.List;
-
-import in.programmeraki.hbt.adapter.AppAdapter;
 import in.programmeraki.hbt.utils.AppHelpFragment;
 
 public class FeaturesActivity extends AppCompatActivity {
@@ -220,6 +220,6 @@ public class FeaturesActivity extends AppCompatActivity {
 	}
 
 	public void gotoHomeActivity(View view) {
-		startActivity(new Intent(this, HomeActivity.class));
+		startActivity(new Intent(this, DebugActivity.class));
 	}
 }

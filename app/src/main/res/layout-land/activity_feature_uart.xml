@@ -38,7 +38,7 @@
 
 		<fragment
 			android:id="@+id/fragment_control"
-			android:name="in.programmeraki.hbt.uart.UARTControlFragment"
+			android:name="in.programmeraki.hbt.nrfkit.uart.UARTControlFragment"
 			android:layout_width="0dp"
 			android:layout_height="match_parent"
 			android:layout_weight="8"
@@ -51,7 +51,7 @@
 
 			<fragment
 				android:id="@+id/fragment_log"
-				android:name="in.programmeraki.hbt.uart.UARTLogFragment"
+				android:name="in.programmeraki.hbt.nrfkit.uart.UARTLogFragment"
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				tools:layout="@layout/fragment_feature_uart_log"/>

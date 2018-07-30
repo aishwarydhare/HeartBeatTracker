@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  ************************************************************************************************************************************************/
 
-package in.programmeraki.hbt.widget;
+package in.programmeraki.hbt.nrfkit.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;

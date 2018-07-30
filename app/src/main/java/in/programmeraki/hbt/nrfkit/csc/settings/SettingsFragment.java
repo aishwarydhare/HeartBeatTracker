@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.csc.settings;
+package in.programmeraki.hbt.nrfkit.csc.settings;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;

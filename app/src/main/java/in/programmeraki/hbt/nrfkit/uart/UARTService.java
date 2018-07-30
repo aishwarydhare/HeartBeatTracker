@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.uart;
+package in.programmeraki.hbt.nrfkit.uart;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -43,12 +43,12 @@ import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.Wearable;
 
 import in.programmeraki.hbt.FeaturesActivity;
+import in.programmeraki.hbt.nrfkit.wearable.common.Constants;
 import in.programmeraki.hbt.utils.ToolboxApplication;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.log.Logger;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.profile.BleProfileService;
-import in.programmeraki.hbt.wearable.common.Constants;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileService;
 
 public class UARTService extends BleProfileService implements UARTManagerCallbacks {
 	private static final String TAG = "UARTService";

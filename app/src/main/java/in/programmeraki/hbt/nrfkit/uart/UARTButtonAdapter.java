@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.uart;
+package in.programmeraki.hbt.nrfkit.uart;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,8 +29,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.uart.domain.Command;
-import in.programmeraki.hbt.uart.domain.UartConfiguration;
+import in.programmeraki.hbt.nrfkit.uart.domain.Command;
+import in.programmeraki.hbt.nrfkit.uart.domain.UartConfiguration;
 
 public class UARTButtonAdapter extends BaseAdapter {
 	private UartConfiguration mConfiguration;

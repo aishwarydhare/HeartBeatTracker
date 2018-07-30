@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.uart;
+package in.programmeraki.hbt.nrfkit.uart;
 
 import android.Manifest;
 import android.animation.ArgbEvaluator;
@@ -88,15 +88,15 @@ import java.util.UUID;
 
 import in.programmeraki.hbt.utils.ToolboxApplication;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.dfu.adapter.FileBrowserAppsAdapter;
-import in.programmeraki.hbt.profile.BleProfileService;
-import in.programmeraki.hbt.profile.BleProfileServiceReadyActivity;
-import in.programmeraki.hbt.uart.database.DatabaseHelper;
-import in.programmeraki.hbt.uart.domain.Command;
-import in.programmeraki.hbt.uart.domain.UartConfiguration;
-import in.programmeraki.hbt.uart.wearable.UARTConfigurationSynchronizer;
-import in.programmeraki.hbt.utility.FileHelper;
-import in.programmeraki.hbt.widget.ClosableSpinner;
+import in.programmeraki.hbt.nrfkit.dfu.adapter.FileBrowserAppsAdapter;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileService;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileServiceReadyActivity;
+import in.programmeraki.hbt.nrfkit.uart.database.DatabaseHelper;
+import in.programmeraki.hbt.nrfkit.uart.domain.Command;
+import in.programmeraki.hbt.nrfkit.uart.domain.UartConfiguration;
+import in.programmeraki.hbt.nrfkit.uart.wearable.UARTConfigurationSynchronizer;
+import in.programmeraki.hbt.nrfkit.utility.FileHelper;
+import in.programmeraki.hbt.nrfkit.widget.ClosableSpinner;
 
 public class UARTActivity extends BleProfileServiceReadyActivity<UARTService.UARTBinder> implements UARTInterface,
 		UARTNewConfigurationDialogFragment.NewConfigurationDialogListener, UARTConfigurationsAdapter.ActionListener, AdapterView.OnItemSelectedListener,

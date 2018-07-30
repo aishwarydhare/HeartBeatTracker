@@ -19,7 +19,7 @@
  * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package in.programmeraki.hbt.bpm;
+package in.programmeraki.hbt.nrfkit.bpm;
 
 import android.bluetooth.BluetoothDevice;
 import android.os.Bundle;
@@ -28,9 +28,10 @@ import android.widget.TextView;
 import java.util.Calendar;
 import java.util.UUID;
 
-import no.nordicsemi.android.ble.BleManager;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.profile.BleProfileActivity;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileActivity;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileActivity;
+import no.nordicsemi.android.ble.BleManager;
 
 // TODO The BPMActivity should be rewritten to use the service approach, like other do.
 public class BPMActivity extends BleProfileActivity implements BPMManagerCallbacks {

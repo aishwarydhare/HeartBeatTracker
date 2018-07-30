@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.cgms;
+package in.programmeraki.hbt.nrfkit.cgms;
 
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCharacteristic;
@@ -35,10 +35,10 @@ import java.util.UUID;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.ble.Request;
 import no.nordicsemi.android.log.Logger;
-import in.programmeraki.hbt.parser.CGMMeasurementParser;
-import in.programmeraki.hbt.parser.CGMSpecificOpsControlPointParser;
-import in.programmeraki.hbt.parser.RecordAccessControlPointParser;
-import in.programmeraki.hbt.utility.DebugLogger;
+import in.programmeraki.hbt.nrfkit.parser.CGMMeasurementParser;
+import in.programmeraki.hbt.nrfkit.parser.CGMSpecificOpsControlPointParser;
+import in.programmeraki.hbt.nrfkit.parser.RecordAccessControlPointParser;
+import in.programmeraki.hbt.nrfkit.utility.DebugLogger;
 
 public class CGMSManager extends BleManager<CGMSManagerCallbacks> {
 	private static final String TAG = "CGMSManager";

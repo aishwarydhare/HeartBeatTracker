@@ -19,7 +19,7 @@
  * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package in.programmeraki.hbt.gls;
+package in.programmeraki.hbt.nrfkit.gls;
 
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCharacteristic;
@@ -36,10 +36,10 @@ import java.util.UUID;
 import no.nordicsemi.android.ble.BleManager;
 import no.nordicsemi.android.ble.Request;
 import no.nordicsemi.android.log.Logger;
-import in.programmeraki.hbt.parser.GlucoseMeasurementContextParser;
-import in.programmeraki.hbt.parser.GlucoseMeasurementParser;
-import in.programmeraki.hbt.parser.RecordAccessControlPointParser;
-import in.programmeraki.hbt.utility.DebugLogger;
+import in.programmeraki.hbt.nrfkit.parser.GlucoseMeasurementContextParser;
+import in.programmeraki.hbt.nrfkit.parser.GlucoseMeasurementParser;
+import in.programmeraki.hbt.nrfkit.parser.RecordAccessControlPointParser;
+import in.programmeraki.hbt.nrfkit.utility.DebugLogger;
 
 @SuppressWarnings("unused")
 public class GlucoseManager extends BleManager<GlucoseManagerCallbacks> {

@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.uart.wearable;
+package in.programmeraki.hbt.nrfkit.uart.wearable;
 
 import android.content.Context;
 import android.net.Uri;
@@ -35,8 +35,8 @@ import com.google.android.gms.wearable.Wearable;
 
 import java.util.ArrayList;
 
-import in.programmeraki.hbt.uart.domain.Command;
-import in.programmeraki.hbt.uart.domain.UartConfiguration;
+import in.programmeraki.hbt.nrfkit.uart.domain.Command;
+import in.programmeraki.hbt.nrfkit.uart.domain.UartConfiguration;
 import in.programmeraki.hbt.wearable.common.Constants;
 
 public class UARTConfigurationSynchronizer {

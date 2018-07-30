@@ -24,7 +24,7 @@ package in.programmeraki.ble;
 
 import android.bluetooth.BluetoothGatt;
 
-import in.programmeraki.hbt.uart.UARTProfile;
+import in.programmeraki.hbt.nrfkit.uart.UARTProfile;
 
 public class BleProfileProvider {
 

@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.csc;
+package in.programmeraki.hbt.nrfkit.csc;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -38,10 +38,10 @@ import java.util.Locale;
 import java.util.UUID;
 
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.csc.settings.SettingsActivity;
-import in.programmeraki.hbt.csc.settings.SettingsFragment;
-import in.programmeraki.hbt.profile.BleProfileService;
-import in.programmeraki.hbt.profile.BleProfileServiceReadyActivity;
+import in.programmeraki.hbt.nrfkit.csc.settings.SettingsActivity;
+import in.programmeraki.hbt.nrfkit.csc.settings.SettingsFragment;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileService;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileServiceReadyActivity;
 
 public class CSCActivity extends BleProfileServiceReadyActivity<CSCService.CSCBinder> {
 	private TextView mSpeedView;

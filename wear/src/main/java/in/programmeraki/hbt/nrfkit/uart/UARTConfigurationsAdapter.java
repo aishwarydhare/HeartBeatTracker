@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.uart;
+package in.programmeraki.hbt.nrfkit.uart;
 
 import android.content.Context;
 import android.support.wearable.view.WearableListView;
@@ -32,7 +32,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.uart.domain.UartConfiguration;
+import in.programmeraki.hbt.nrfkit.uart.domain.UartConfiguration;
 
 public class UARTConfigurationsAdapter extends WearableListView.Adapter {
 	private final LayoutInflater mInflater;

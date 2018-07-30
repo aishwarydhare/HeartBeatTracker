@@ -2,44 +2,36 @@ package in.programmeraki.hbt;
 
 import android.bluetooth.BluetoothDevice;
 import android.graphics.Color;
-import android.graphics.DashPathEffect;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dd.morphingbutton.MorphingButton;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.components.LimitLine;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
-import com.github.mikephil.charting.listener.OnChartGestureListener;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
-import com.github.mikephil.charting.utils.Utils;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
 
 import in.programmeraki.hbt.adapter.BLEFeedAdapter;
-import in.programmeraki.hbt.profile.BleProfileActivity;
-import in.programmeraki.hbt.utils.DayAxisValueFormatter;
+import in.programmeraki.hbt.nrfkit.profile.BleProfileActivity;
+import in.programmeraki.hbt.utils.Constant;
 import in.programmeraki.hbt.utils.HRSManager;
 import in.programmeraki.hbt.utils.HRSManagerCallbacks;
 import no.nordicsemi.android.ble.BleManager;
@@ -56,19 +48,18 @@ public class LiveActivity extends BleProfileActivity implements HRSManagerCallba
 
     private final String TAG = "Main";
     BLEFeedAdapter bleFeedAdapter;
+    ArrayList<ILineDataSet> dataSets;
+    ArrayList<Entry> pulseValues = new ArrayList<>();
+    ArrayList<Entry> tempValues = new ArrayList<>();
     private TextView title_tv;
-    private Button action_connect, back_btn;
+    private Button action_connect;
+    private ImageView back_iv;
     private ViewGroup content_vg, topbar_ll, graph_fl;
     private ProgressBar progressBar;
     private TextView current_pulse_tv, today_pulse_peak_tv, current_temp_tv, today_temp_peak_tv;
     private int mHrmValue = 0;
     private int mCounter = 0;
-
     private LineChart mChart;
-    ArrayList<ILineDataSet> dataSets;
-
-    ArrayList<Entry> pulseValues = new ArrayList<>();
-    ArrayList<Entry> tempValues = new ArrayList<>();
 
     /*
      * BleActivity Abstract Methods
@@ -77,9 +68,11 @@ public class LiveActivity extends BleProfileActivity implements HRSManagerCallba
     protected void onCreateView(Bundle savedInstanceState) {
         setContentView(R.layout.activity_live);
 
+        Constant.selected_frag_id = 2;
+
         action_connect = findViewById(R.id.action_connect);
         title_tv = findViewById(R.id.title_tv);
-        back_btn = findViewById(R.id.back_btn);
+        back_iv = findViewById(R.id.back_iv);
         progressBar = findViewById(R.id.progressBar);
         content_vg = findViewById(R.id.content_vg);
         topbar_ll = findViewById(R.id.topbar_ll);
@@ -97,7 +90,7 @@ public class LiveActivity extends BleProfileActivity implements HRSManagerCallba
             setHRSValueOnView(60);
         });
 
-        back_btn.setOnClickListener(view -> {
+        back_iv.setOnClickListener(view -> {
             finish();
         });
 
@@ -185,7 +178,7 @@ public class LiveActivity extends BleProfileActivity implements HRSManagerCallba
         super.onDeviceConnected(device);
         runOnUiThread(() ->{
             progressBar.setVisibility(View.GONE);
-
+            action_connect.setVisibility(View.GONE);
             Toast.makeText(this, "Device Connected", Toast.LENGTH_SHORT).show();
             content_vg.setVisibility(View.VISIBLE);
         });

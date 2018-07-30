@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.profile.multiconnect;
+package in.programmeraki.hbt.nrfkit.profile.multiconnect;
 
 import android.bluetooth.BluetoothDevice;
 import android.support.annotation.StringRes;

@@ -32,7 +32,7 @@ import com.google.android.gms.wearable.Node;
 
 import in.programmeraki.hbt.R;
 import in.programmeraki.hbt.wearable.common.Constants;
-import in.programmeraki.hbt.uart.UARTConfigurationsActivity;
+import in.programmeraki.hbt.nrfkit.uart.UARTConfigurationsActivity;
 
 public class MainWearableListenerService extends com.google.android.gms.wearable.WearableListenerService {
 	public static final String TAG = "UARTWLS";
