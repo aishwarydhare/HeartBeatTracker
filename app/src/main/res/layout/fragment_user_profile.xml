@@ -164,11 +164,25 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
                             android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:gravity="center"
                             android:backgroundTint="@color/tealPrimaryMid"
-                            android:hint="Enter Height in cm"
+                            android:hint="Enter Height"
                             android:inputType="number"
                             android:text=""
                             android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="cm"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_height="match_parent"
+                            android:layout_width="8dp"
+                            />
 
                         <EditText
                             android:id="@+id/weight_et"
@@ -176,10 +190,19 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
                             android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:gravity="center"
                             android:backgroundTint="@color/tealPrimaryMid"
-                            android:hint="Enter Weight in Kg"
+                            android:hint="Enter Weight"
                             android:inputType="number"
                             android:text=""
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="kg"
                             android:textSize="13sp" />
                     </LinearLayout>
 
@@ -192,21 +215,21 @@
                         <View
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="2"/>
+                            android:layout_weight="2" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="min"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="max"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp" />
 
                     </LinearLayout>
 
@@ -219,7 +242,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.9"
-                            android:text="Pulse Range"/>
+                            android:text="Pulse Range" />
 
                         <EditText
                             android:id="@+id/pulse_min_et"
@@ -229,7 +252,7 @@
                             android:backgroundTint="@color/tealPrimaryMid"
                             android:hint="min"
                             android:inputType="number"
-                            android:textSize="13sp"/>
+                            android:textSize="13sp" />
 
                         <EditText
                             android:id="@+id/pulse_max_et"
@@ -239,7 +262,7 @@
                             android:backgroundTint="@color/tealPrimaryMid"
                             android:hint="max"
                             android:inputType="number"
-                            android:textSize="13sp"/>
+                            android:textSize="13sp" />
 
                     </LinearLayout>
 
@@ -252,7 +275,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.9"
-                            android:text="Temp Range"/>
+                            android:text="Temp Range" />
 
                         <EditText
                             android:id="@+id/temp_min_et"
@@ -262,7 +285,7 @@
                             android:backgroundTint="@color/tealPrimaryMid"
                             android:hint="min"
                             android:inputType="number"
-                            android:textSize="13sp"/>
+                            android:textSize="13sp" />
 
                         <EditText
                             android:id="@+id/temp_max_et"
@@ -272,7 +295,7 @@
                             android:backgroundTint="@color/tealPrimaryMid"
                             android:hint="max"
                             android:inputType="number"
-                            android:textSize="13sp"/>
+                            android:textSize="13sp" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -284,6 +307,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                 android:backgroundTint="@color/tealPrimaryMid"
                 android:text="Submit"
                 android:textColor="@color/colorWhite"/>

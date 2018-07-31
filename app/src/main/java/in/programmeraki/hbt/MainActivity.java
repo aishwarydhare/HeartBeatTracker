@@ -315,25 +315,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    class MySnackBarListener implements View.OnClickListener{
-        @Override
-        public void onClick(View view) {
-            AlertDialog.Builder builder;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                builder = new AlertDialog.Builder(activity, R.style.Theme_AppCompat_Dialog_Alert);
-            } else {
-                builder = new AlertDialog.Builder(activity);
-            }
-//            builder.setTitle(cloudMessage.title)
-//                    .setMessage(cloudMessage.body)
-//                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            dialog.dismiss();
-//                        }
-//                    })
-//                    .setIcon(android.R.drawable.ic_dialog_alert)
-//                    .show();
-        }
-    }
-
 }

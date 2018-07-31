@@ -22,7 +22,7 @@
   -->
 <resources>
 
-	<string name="app_name">My Beats</string>
+	<string name="app_name">Baby Monitor</string>
 	<string name="font_path">fonts/trebucbd.ttf</string>
 	<string name="normal_font_path">fonts/trebuc.ttf</string>
 
@@ -80,5 +80,6 @@
 
 	<string name="navigation_drawer_open">Open navigation drawer</string>
 	<string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="critical_alert_str">Critical Alert</string>
 
 </resources>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_v"
     android:layout_width="match_parent"
-    android:background="@color/colorWhite"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
 
     <RelativeLayout
         android:id="@+id/topbar_ll"
@@ -39,11 +40,11 @@
         android:id="@+id/action_connect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Connect"
+        android:layout_centerInParent="true"
         android:background="@color/tealPrimaryLite"
         android:backgroundTint="@color/tealPrimaryLite"
-        android:layout_centerInParent="true"
         android:onClick="onConnectClicked"
+        android:text="Start Recording"
         android:textColor="@color/colorWhite"/>
 
     <LinearLayout
@@ -57,8 +58,8 @@
             android:id="@+id/graph_fl"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/colorWhite"
-            android:layout_weight="3">
+            android:layout_weight="3"
+            android:background="@color/colorWhite">
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/mChart"
                 android:layout_width="match_parent"
@@ -68,101 +69,98 @@
         <TextView
             android:id="@+id/device_name"
             android:layout_width="wrap_content"
-            android:visibility="gone"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/battery"
             android:layout_width="wrap_content"
-            android:visibility="gone"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/both_rg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:checked="true"
+                android:text="Temp and Pulse"
+                android:textColor="@color/tealPrimaryMid" />
 
-                <RadioButton
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="Temp"
-                    android:textColor="@color/tealPrimaryMid"/>
+            <RadioButton
+                android:id="@+id/pulse_rg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pulse"
+                android:textColor="@color/tealPrimaryMid" />
 
-                <RadioButton
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Pulse"
-                    android:textColor="@color/tealPrimaryMid"/>
-
-                <RadioButton
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content"
-                    android:text="Temp and Pulse"
-                    android:textColor="@color/tealPrimaryMid"/>
-
-            </LinearLayout>
-
+            <RadioButton
+                android:id="@+id/temp_rg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Temp"
+                android:textColor="@color/tealPrimaryMid" />
         </RadioGroup>
 
+
         <android.support.v7.widget.CardView
-            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_margin="10dp"
             android:layout_weight="1">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:background="@color/redPrimary"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/redPrimary">
 
                 <ImageView
                     android:id="@+id/user_iv"
                     android:layout_width="60dp"
-                    android:layout_centerVertical="true"
-                    android:padding="10dp"
+                    android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
                     android:background="@color/redPrimaryDark"
-                    android:src="@drawable/ic_person_outline_black_72dp"
-                    android:layout_height="match_parent" />
+                    android:padding="10dp"
+                    android:src="@drawable/ic_person_outline_black_72dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_toEndOf="@id/user_iv"
                     android:layout_height="match_parent"
-                    android:weightSum="2"
-                    android:orientation="horizontal">
+                    android:layout_toEndOf="@id/user_iv"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:padding="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="15dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Today's Total"
                             android:textColor="@color/colorWhite"
-                            android:textStyle="bold"
-                            android:textSize="17sp"/>
+                            android:textSize="17sp"
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:id="@+id/today_pulse_peak_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
                             android:text="5123"
                             android:textColor="@color/colorWhite"
-                            android:paddingTop="10dp"
                             android:textSize="14sp"/>
 
                     </LinearLayout>
@@ -171,24 +169,24 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:padding="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="15dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Current Pulse"
                             android:textColor="@color/colorWhite"
-                            android:textStyle="bold"
-                            android:textSize="17sp"/>
+                            android:textSize="17sp"
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:id="@+id/current_pulse_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
                             android:text="78 bpm"
                             android:textColor="@color/colorWhite"
-                            android:paddingTop="10dp"
                             android:textSize="14sp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -196,55 +194,55 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_margin="10dp"
             android:layout_weight="1">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:background="@color/redPrimary"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/redPrimary">
 
                 <ImageView
                     android:id="@+id/user2_iv"
                     android:layout_width="60dp"
-                    android:layout_centerVertical="true"
-                    android:padding="10dp"
+                    android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
                     android:background="@color/redPrimaryDark"
-                    android:src="@drawable/ic_person_outline_black_72dp"
-                    android:layout_height="match_parent" />
+                    android:padding="10dp"
+                    android:src="@drawable/ic_person_outline_black_72dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_toEndOf="@id/user2_iv"
                     android:layout_height="match_parent"
-                    android:weightSum="2"
-                    android:orientation="horizontal">
+                    android:layout_toEndOf="@id/user2_iv"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:padding="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="15dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Today's Peak"
                             android:textColor="@color/colorWhite"
-                            android:textStyle="bold"
-                            android:textSize="17sp"/>
+                            android:textSize="17sp"
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:id="@+id/today_temp_peak_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
                             android:text="5123"
                             android:textColor="@color/colorWhite"
-                            android:paddingTop="10dp"
                             android:textSize="14sp"/>
 
                     </LinearLayout>
@@ -253,24 +251,24 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:padding="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="15dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Today's Peak"
                             android:textColor="@color/colorWhite"
-                            android:textStyle="bold"
-                            android:textSize="17sp"/>
+                            android:textSize="17sp"
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:id="@+id/current_temp_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
                             android:text="78.6˚ C"
                             android:textColor="@color/colorWhite"
-                            android:paddingTop="10dp"
                             android:textSize="14sp"/>
                     </LinearLayout>
                 </LinearLayout>
