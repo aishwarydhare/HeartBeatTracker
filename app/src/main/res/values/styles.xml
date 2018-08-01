@@ -149,13 +149,13 @@
 		<item name="tabTextAppearance">@style/TabTextAppearance_small</item>
 		<item name="tabBackground">@color/colorWhite</item>
 		<item name="tabIndicatorColor">@color/tealPrimaryMid</item>
-		<item name="tabIndicatorHeight">3dp</item>
 		<item name="tabSelectedTextColor">@color/tealPrimaryMid</item>
+		<item name="tabIndicatorHeight">3dp</item>
 	</style>
 
 	<style name="TabTextAppearance_small" parent="TextAppearance.AppCompat.Button">
-		<item name="android:textSize">15sp</item>
-		<item name="android:textColor">@color/tealSecondaryMid</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:textColor">@color/tealPrimaryMid</item>
 		<item name="textAllCaps">true</item>
 	</style>
 

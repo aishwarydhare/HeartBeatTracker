@@ -4,7 +4,6 @@
     android:id="@android:id/text1"
     android:layout_width="match_parent"
     android:textSize="15sp"
-    android:textColor="@color/tealSecondaryMid"
     android:gravity="center"
     android:text="hello"
     android:textStyle="bold"

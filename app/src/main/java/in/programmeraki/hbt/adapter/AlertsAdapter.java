@@ -38,7 +38,7 @@ public class AlertsAdapter extends RecyclerView.Adapter<AlertsAdapter.MyViewHold
             alert = Common.instance.getTempTrackerAlerts().get(position);
         }
         holder.msg_tv.setText(alert.getMsg());
-        holder.val_tv.setText(alert.getVal());
+        holder.val_tv.setText(alert.getVal()+"");
         holder.datetime_tv.setText(alert.getDatetimeString());
 
         if(alert.getCondition() == TrackerAlert.maxCondition){

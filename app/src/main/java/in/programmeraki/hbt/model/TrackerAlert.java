@@ -41,7 +41,7 @@ public class TrackerAlert {
 
     @SuppressLint("SimpleDateFormat")
     public String getDatetimeString() {
-        return new SimpleDateFormat("DD/MM/YYYY HH:mm:ss").format(datetime);
+        return new SimpleDateFormat("DD/MM/yyyy HH:mm:ss").format(datetime);
     }
 
     public void setDatetime(Date datetime) {

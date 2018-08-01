@@ -149,8 +149,9 @@ public class MainActivity extends AppCompatActivity {
         };
 
         findViewById(R.id.home_ll).setOnClickListener(nav_drawer_items_listener);
-        findViewById(R.id.unlock_ll).setOnClickListener(nav_drawer_items_listener);
-        findViewById(R.id.payments_ll).setOnClickListener(nav_drawer_items_listener);
+        findViewById(R.id.live_ll).setOnClickListener(nav_drawer_items_listener);
+        findViewById(R.id.alerts_ll).setOnClickListener(nav_drawer_items_listener);
+        findViewById(R.id.history_ll).setOnClickListener(nav_drawer_items_listener);
         findViewById(R.id.settings_ll).setOnClickListener(nav_drawer_items_listener);
         findViewById(R.id.signout_ll).setOnClickListener(nav_drawer_items_listener);
 
@@ -206,8 +207,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case 3:
-//                fragment = new PaymentFragment();
-//                frag_str = "PaymentFragment";
+                startActivity(new Intent(activity, AlertsActivity.class));
                 break;
 
             case 4:
@@ -252,11 +252,15 @@ public class MainActivity extends AppCompatActivity {
                 set_fragment(1);
                 break;
 
-            case R.id.unlock_ll:
+            case R.id.live_ll:
                 set_fragment(2);
                 break;
 
-            case R.id.payments_ll:
+            case R.id.alerts_ll:
+                set_fragment(3);
+                break;
+
+            case R.id.history_ll:
                 set_fragment(3);
                 break;
 
@@ -310,9 +314,9 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed();
         }
 
-        if(Constant.selected_frag_id == 1){
-            drawer_icon.setImageDrawable(getResources().getDrawable(R.drawable.ic_drawer));
-        }
+//        if(Constant.selected_frag_id == 1){
+//            drawer_icon.setImageDrawable(getResources().getDrawable(R.drawable.ic_drawer));
+//        }
     }
 
 }

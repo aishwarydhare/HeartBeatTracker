@@ -89,7 +89,7 @@
 
 
             <LinearLayout
-                android:id="@+id/unlock_ll"
+                android:id="@+id/live_ll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -145,7 +145,7 @@
 
 
             <LinearLayout
-                android:id="@+id/payments_ll"
+                android:id="@+id/history_ll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"

@@ -32,9 +32,6 @@ public class AlertsActivity extends AppCompatActivity {
             TextView tv = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tablayout_textview,null);
             tabLayout.getTabAt(i).setCustomView(tv);
         }
-        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.tealPrimaryDark));
-        tabLayout.setTabTextColors(ContextCompat.getColor(this, R.color.tealSecondaryMid),
-                ContextCompat.getColor(this, R.color.tealSecondaryMid));
 
         findViewById(R.id.back_iv).setOnClickListener(view -> {
             finish();
