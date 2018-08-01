@@ -259,6 +259,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AlertsActivity" />
 
         <service
 			android:name="in.programmeraki.hbt.nrfkit.cgms.CGMService"

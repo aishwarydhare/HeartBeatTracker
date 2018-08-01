@@ -214,14 +214,18 @@ public class LiveActivity extends BleProfileActivity implements HRSManagerCallba
         if(value >= p_max){
             tAlert = new TrackerAlert();
             tAlert.setMsg("The pulse has crossed " + value + " bpm.");
+            tAlert.setCondition(TrackerAlert.maxCondition);
+            tAlert.setConditionVal(p_max);
         } else if(value <= p_min){
             tAlert = new TrackerAlert();
             tAlert.setMsg("The pulse is under " + value + " bpm.");
+            tAlert.setCondition(TrackerAlert.minCondition);
+            tAlert.setConditionVal(p_min);
         }
 
         if(tAlert != null){
             tAlert.setVal(value);
-            tAlert.setType(TrackerAlert.criticalType);
+            tAlert.setType(TrackerAlert.pulseType);
             tAlert.setDatetime(Calendar.getInstance().getTime());
             Common.instance.trackerAlerts.add(tAlert);
             NotificationBuilder.showNotification(

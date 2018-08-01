@@ -7,13 +7,33 @@ import java.util.Date;
 
 public class TrackerAlert {
 
-    public static int warningType = 1;
-    public static int criticalType = 2;
+    public static int tempType = 1;
+    public static int pulseType = 2;
+    public static int minCondition = 1;
+    public static int maxCondition = 2;
 
     private Date datetime;
     private String msg;
     private int type;
     private int val;
+    private int condition;
+    private int conditionVal;
+
+    public int getConditionVal() {
+        return conditionVal;
+    }
+
+    public void setConditionVal(int conditionVal) {
+        this.conditionVal = conditionVal;
+    }
+
+    public int getCondition() {
+        return condition;
+    }
+
+    public void setCondition(int condition) {
+        this.condition = condition;
+    }
 
     public Date getDatetime() {
         return datetime;

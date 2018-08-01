@@ -145,4 +145,18 @@
 		<item name="android:windowBackground">@color/nordicBackground</item>
 	</style>
 
+	<style name="TabLayout_small" parent="Base.Widget.Design.TabLayout">
+		<item name="tabTextAppearance">@style/TabTextAppearance_small</item>
+		<item name="tabBackground">@color/colorWhite</item>
+		<item name="tabIndicatorColor">@color/tealPrimaryMid</item>
+		<item name="tabIndicatorHeight">3dp</item>
+		<item name="tabSelectedTextColor">@color/tealPrimaryMid</item>
+	</style>
+
+	<style name="TabTextAppearance_small" parent="TextAppearance.AppCompat.Button">
+		<item name="android:textSize">15sp</item>
+		<item name="android:textColor">@color/tealSecondaryMid</item>
+		<item name="textAllCaps">true</item>
+	</style>
+
 </resources>
