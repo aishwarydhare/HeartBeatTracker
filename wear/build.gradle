@@ -6,7 +6,7 @@ android {
     compileSdkVersion 27
 
     defaultConfig {
-        applicationId "no.nordicsemi.android.nrftoolbox"
+        applicationId "in.programmeraki.hbt"
         minSdkVersion 23
         targetSdkVersion 27
         versionCode 272606601 // target: 27, version: 2.6.0, build: 66, multi-APK: 01

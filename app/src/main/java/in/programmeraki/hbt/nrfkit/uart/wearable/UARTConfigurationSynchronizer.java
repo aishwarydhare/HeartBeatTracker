@@ -37,7 +37,7 @@ import java.util.ArrayList;
 
 import in.programmeraki.hbt.nrfkit.uart.domain.Command;
 import in.programmeraki.hbt.nrfkit.uart.domain.UartConfiguration;
-import in.programmeraki.hbt.wearable.common.Constants;
+import in.programmeraki.hbt.nrfkit.wearable.common.Constants;
 
 public class UARTConfigurationSynchronizer {
 	private static final String WEAR_URI_PREFIX = "wear:"; // no / at the end as the path already has it

@@ -55,7 +55,7 @@ import com.google.android.gms.wearable.Wearable;
 
 import in.programmeraki.ble.BleProfileService;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.wearable.common.Constants;
+import in.programmeraki.hbt.nrfkit.wearable.common.Constants;
 import in.programmeraki.hbt.nrfkit.uart.domain.Command;
 import in.programmeraki.hbt.nrfkit.uart.domain.UartConfiguration;
 

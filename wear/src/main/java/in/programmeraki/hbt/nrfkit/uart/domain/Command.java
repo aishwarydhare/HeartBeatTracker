@@ -27,7 +27,7 @@ import android.os.Parcelable;
 
 import com.google.android.gms.wearable.DataMap;
 
-import in.programmeraki.hbt.wearable.common.Constants;
+import in.programmeraki.hbt.nrfkit.wearable.common.Constants;
 
 public class Command implements Parcelable {
 	public enum Icon {

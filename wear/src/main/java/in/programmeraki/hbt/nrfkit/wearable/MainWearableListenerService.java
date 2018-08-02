@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.wearable;
+package in.programmeraki.hbt.nrfkit.wearable;
 
 import android.app.PendingIntent;
 import android.content.Intent;
@@ -31,8 +31,8 @@ import com.google.android.gms.wearable.MessageEvent;
 import com.google.android.gms.wearable.Node;
 
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.wearable.common.Constants;
 import in.programmeraki.hbt.nrfkit.uart.UARTConfigurationsActivity;
+import in.programmeraki.hbt.nrfkit.wearable.common.Constants;
 
 public class MainWearableListenerService extends com.google.android.gms.wearable.WearableListenerService {
 	public static final String TAG = "UARTWLS";

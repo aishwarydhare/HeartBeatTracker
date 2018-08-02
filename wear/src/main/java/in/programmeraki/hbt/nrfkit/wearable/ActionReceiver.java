@@ -20,7 +20,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package in.programmeraki.hbt.wearable;
+package in.programmeraki.hbt.nrfkit.wearable;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -33,8 +33,7 @@ import com.google.android.gms.wearable.MessageApi;
 import com.google.android.gms.wearable.Node;
 import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.Wearable;
-
-import in.programmeraki.hbt.wearable.common.Constants;
+import in.programmeraki.hbt.nrfkit.wearable.common.Constants;
 
 public class ActionReceiver extends BroadcastReceiver {
 	private static final String TAG = "ActionReceiver";

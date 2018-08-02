@@ -29,7 +29,7 @@ import com.google.android.gms.wearable.DataMap;
 
 import java.util.ArrayList;
 
-import in.programmeraki.hbt.wearable.common.Constants;
+import in.programmeraki.hbt.nrfkit.wearable.common.Constants;
 
 public class UartConfiguration implements Parcelable {
 	private long id;

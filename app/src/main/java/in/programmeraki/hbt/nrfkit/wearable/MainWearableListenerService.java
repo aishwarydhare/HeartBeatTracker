@@ -28,7 +28,7 @@ import com.google.android.gms.wearable.MessageEvent;
 import com.google.android.gms.wearable.WearableListenerService;
 
 import in.programmeraki.hbt.nrfkit.uart.UARTService;
-import in.programmeraki.hbt.wearable.common.Constants;
+import in.programmeraki.hbt.nrfkit.wearable.common.Constants;
 
 /**
  * The main listener for messages from Wearable devices. There may be only one such service per application so it has to handle messages from all profiles.

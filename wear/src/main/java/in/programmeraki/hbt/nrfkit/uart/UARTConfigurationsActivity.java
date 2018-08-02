@@ -56,7 +56,7 @@ import java.util.List;
 
 import in.programmeraki.ble.BleProfileService;
 import in.programmeraki.hbt.R;
-import in.programmeraki.hbt.wearable.common.Constants;
+import in.programmeraki.hbt.nrfkit.wearable.common.Constants;
 import in.programmeraki.hbt.nrfkit.uart.domain.UartConfiguration;
 
 public class UARTConfigurationsActivity extends Activity implements GoogleApiClient.ConnectionCallbacks,

@@ -5,11 +5,11 @@ android {
     buildToolsVersion "27.0.3"
 
     defaultConfig {
-        applicationId "in.programmeraki.hbt.nrfkit.hrs"
+        applicationId "in.programmeraki.hbt"
         minSdkVersion 18
         targetSdkVersion 27
-        versionCode 66
-        versionName "2.6.0"
+        versionCode 1
+        versionName "1.0.0"
         resConfigs "en"
     }
     buildTypes {

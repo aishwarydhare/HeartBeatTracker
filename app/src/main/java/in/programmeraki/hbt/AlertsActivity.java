@@ -40,8 +40,8 @@ public class AlertsActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new CommonAlertsFragment(), "Past");
-        adapter.addFragment(new CommonAlertsFragment(), "Upcoming");
+        adapter.addFragment(new CommonAlertsFragment(), "Pulse");
+        adapter.addFragment(new CommonAlertsFragment(), "Temp");
         viewPager.setAdapter(adapter);
     }
 
