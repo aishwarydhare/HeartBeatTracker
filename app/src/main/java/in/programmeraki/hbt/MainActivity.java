@@ -2,7 +2,6 @@ package in.programmeraki.hbt;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -26,6 +25,7 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import in.programmeraki.hbt.fragment.HistoryActivity;
 import in.programmeraki.hbt.fragment.UserProfileFragment;
 import in.programmeraki.hbt.utils.Constant;
 
@@ -169,11 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 builder.setTitle(jsonObject.getString("title"))
                         .setMessage(jsonObject.getString("body"))
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        })
+                        .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .show();
             } catch (JSONException e) {
@@ -215,9 +211,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case 5:
-//                fragment = new ItemsListFragment();
-//                fragment.setArguments(item_list_frag_bundle);
-//                frag_str = "ItemsListFragment";
+                startActivity(new Intent(activity, HistoryActivity.class));
                 break;
 
             default:
@@ -233,10 +227,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (fragment != null) {
-            if(getSupportFragmentManager().getBackStackEntryCount() == 0 && !frag_str.equalsIgnoreCase("UserProfile")){
-                getSupportFragmentManager().beginTransaction().addToBackStack(frag_str).replace(R.id.fragment_fl, fragment, frag_str).commit();
+            if(getSupportFragmentManager().getBackStackEntryCount() == 0 &&
+                    !frag_str.equalsIgnoreCase("UserProfile")){
+                getSupportFragmentManager().beginTransaction().addToBackStack(frag_str)
+                        .replace(R.id.fragment_fl, fragment, frag_str).commit();
             } else {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_fl, fragment, frag_str).commit();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_fl, fragment, frag_str).commit();
             }
         }
 
@@ -260,12 +257,12 @@ public class MainActivity extends AppCompatActivity {
                 set_fragment(3);
                 break;
 
-            case R.id.history_ll:
-                set_fragment(3);
-                break;
-
             case R.id.settings_ll:
                 set_fragment(4);
+                break;
+
+            case R.id.history_ll:
+                set_fragment(5);
                 break;
 
             case R.id.signout_ll:

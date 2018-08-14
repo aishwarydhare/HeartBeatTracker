@@ -41,7 +41,7 @@ public class DebugActivity extends BleProfileActivity implements HRSManagerCallb
     private final String TAG = "Main";
     BLEFeedAdapter bleFeedAdapter;
     private Handler mHandler = new Handler();
-    private TextView title_tv;
+    private TextView title_tv, clear_db_tv;
     private Button sync_btn, action_connect;
     private ImageView back_iv;
     private ViewGroup content_vg, topbar_ll;
@@ -59,6 +59,8 @@ public class DebugActivity extends BleProfileActivity implements HRSManagerCallb
     protected void onCreateView(Bundle savedInstanceState) {
         setContentView(R.layout.activity_debug);
 
+        Common.instance.setUpAppDatabase(getApplicationContext());
+
         title_tv = findViewById(R.id.title_tv);
         action_connect = findViewById(R.id.action_connect);
         sync_btn = findViewById(R.id.sync_btn);
@@ -69,6 +71,7 @@ public class DebugActivity extends BleProfileActivity implements HRSManagerCallb
         recyclerView = findViewById(R.id.recyclerView);
         mHRSValue = findViewById(R.id.text_hrs_value);
         mHRSPosition = findViewById(R.id.text_hrs_position);
+        clear_db_tv = findViewById(R.id.clear_db_tv);
 
         progressBar.setVisibility(View.GONE);
         bleFeedAdapter = new BLEFeedAdapter();
@@ -81,6 +84,11 @@ public class DebugActivity extends BleProfileActivity implements HRSManagerCallb
 
         back_iv.setOnClickListener(view -> {
             finish();
+        });
+
+        clear_db_tv.setOnClickListener(view -> {
+            Common.instance.getAppDatabase().feedDataDao().deleteAll();
+            Log.d(TAG, "onCreateView: totalRows:" + String.valueOf(Common.instance.getAppDatabase().feedDataDao().numberOfRows()));
         });
 
         rvHandler = new Handler();

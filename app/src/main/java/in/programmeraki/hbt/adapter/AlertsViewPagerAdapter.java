@@ -10,12 +10,12 @@ import java.util.List;
 import in.programmeraki.hbt.fragment.CommonAlertsFragment;
 import in.programmeraki.hbt.model.TrackerAlert;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class AlertsViewPagerAdapter extends FragmentPagerAdapter {
 
     private final List<Fragment> mFragmentList = new ArrayList<>();
     private final List<String> mFragmentTitleList = new ArrayList<>();
 
-    public ViewPagerAdapter(FragmentManager supportFragmentManager) {
+    public AlertsViewPagerAdapter(FragmentManager supportFragmentManager) {
         super(supportFragmentManager);
     }
 

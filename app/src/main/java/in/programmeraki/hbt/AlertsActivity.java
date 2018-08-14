@@ -3,13 +3,12 @@ package in.programmeraki.hbt;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 
-import in.programmeraki.hbt.adapter.ViewPagerAdapter;
+import in.programmeraki.hbt.adapter.AlertsViewPagerAdapter;
 import in.programmeraki.hbt.fragment.CommonAlertsFragment;
 
 public class AlertsActivity extends AppCompatActivity {
@@ -39,7 +38,7 @@ public class AlertsActivity extends AppCompatActivity {
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        AlertsViewPagerAdapter adapter = new AlertsViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new CommonAlertsFragment(), "Pulse");
         adapter.addFragment(new CommonAlertsFragment(), "Temp");
         viewPager.setAdapter(adapter);

@@ -4,6 +4,7 @@ import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -38,6 +39,7 @@ import java.util.UUID;
 
 import in.programmeraki.hbt.model.TrackerAlert;
 import in.programmeraki.hbt.nrfkit.profile.BleProfileActivity;
+import in.programmeraki.hbt.roomdb.FeedData;
 import in.programmeraki.hbt.utils.Constant;
 import in.programmeraki.hbt.utils.HRSManager;
 import in.programmeraki.hbt.utils.HRSManagerCallbacks;
@@ -56,8 +58,10 @@ public class LiveActivity extends BleProfileActivity implements HRSManagerCallba
     final int pulseAndTempBoth = 1;
     final int pulseOnly = 2;
     final int tempOnly = 3;
+
     final String pulseDataSetLabel = "Pulse (bpm)";
     final String tempDataSetLabel = "Temp (˚C)";
+
     private final String TAG = "Main";
 
     private TextView title_tv;
@@ -98,6 +102,8 @@ public class LiveActivity extends BleProfileActivity implements HRSManagerCallba
 
         activity = this;
         Constant.selected_frag_id = 2;
+
+        Common.instance.setUpAppDatabase(getApplicationContext());
 
         action_connect = findViewById(R.id.action_connect);
         title_tv = findViewById(R.id.title_tv);
@@ -201,6 +207,7 @@ public class LiveActivity extends BleProfileActivity implements HRSManagerCallba
             }
             appendLineChartData(value, 25);
             checkForAlert(value);
+            storeInDB(value, 25);
         });
     }
 
@@ -234,6 +241,19 @@ public class LiveActivity extends BleProfileActivity implements HRSManagerCallba
                     getApplicationContext()
             );
         }
+    }
+
+    private void storeInDB(int pulseVal, int tempVal){
+        FeedData feedData = new FeedData();
+        feedData.setFeed_type(FeedData.pulseType);
+        feedData.setPulse(pulseVal);
+        feedData.setTemp(tempVal);
+
+        int timeInLong = (int) Calendar.getInstance().getTime().getTime();
+        feedData.setDate_time_in_millis(timeInLong);
+
+        // create worker thread to insert data into database
+        new InsertTask(feedData).execute();
     }
 
 
@@ -470,7 +490,6 @@ public class LiveActivity extends BleProfileActivity implements HRSManagerCallba
 
     @Override
     public void onNothingSelected() {
-
     }
 
     class MySnackBarListener implements View.OnClickListener{
@@ -489,4 +508,32 @@ public class LiveActivity extends BleProfileActivity implements HRSManagerCallba
                     .show();
         }
     }
+
+    private static class InsertTask extends AsyncTask<Void,Void,Boolean> {
+        private FeedData feedData;
+        private String TAG = "db_ops";
+
+        // only retain a weak reference to the activity
+        InsertTask(FeedData note) {
+            this.feedData = note;
+        }
+
+        // doInBackground methods runs on a worker thread
+        @Override
+        protected Boolean doInBackground(Void... objs) {
+            Common.instance.getAppDatabase().feedDataDao().insertAll(feedData);
+            return true;
+        }
+
+        // onPostExecute runs on main thread
+        @Override
+        protected void onPostExecute(Boolean bool) {
+            if (bool){
+                Log.d(TAG, "onPostExecute: saved in db, total rows:" +
+                        String.valueOf(Common.instance.getAppDatabase().
+                                feedDataDao().numberOfRows()));
+            }
+        }
+    }
+
 }

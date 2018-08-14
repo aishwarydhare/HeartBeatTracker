@@ -260,6 +260,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AlertsActivity" />
+        <activity android:name=".fragment.HistoryActivity" />
 
         <service
 			android:name="in.programmeraki.hbt.nrfkit.cgms.CGMService"
